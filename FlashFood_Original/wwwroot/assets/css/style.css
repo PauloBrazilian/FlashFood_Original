@@ -588,4 +588,16 @@ article p {
     justify-content: flex-end;
     margin: 0 10px 20px 0;
 }
+
+.alert alert-danger {
+    background-color: #b67804;
+    border: 1px solid;
+    margin-top: 2rem;
+    padding: 1rem;
+
+}
+
+
+
+
 /* FIM LOGIN */

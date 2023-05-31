@@ -2,7 +2,7 @@
 {
     public class Pessoa
     {
-        private String Nome { get; set; }
+        private string Nome { get; set; }
 
         private int Senha { get; set;}
     

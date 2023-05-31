@@ -17,10 +17,21 @@ namespace FlashFood_Original.Controllers
         {
             return View();
         }
-
-        public IActionResult Produtos()
+        
+        [HttpPost]
+        public IActionResult Produtos(string login, int senha)
         {
-            return View();
+            string senhaString = senha.ToString();            
+            if (string.IsNullOrEmpty(login) && string.IsNullOrEmpty(senhaString))
+            {
+                return View(); //libera para tela
+            }
+            else
+            {
+                TempData["erro"] = "Erro no Login ou Senha";
+                return RedirectToAction("login");
+            }
+            
         }
 
         public IActionResult Contato()

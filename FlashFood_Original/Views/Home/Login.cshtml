@@ -1,18 +1,32 @@
-﻿<link href="@Url.Content("~/assets/css/style.css")" rel="stylesheet" type="text/css" />
+﻿@model FlashFood_Original.Controllers.PessoaController
 
+<link href="@Url.Content("~/assets/css/style.css")" rel="stylesheet" type="text/css" />
+
+
+
+
+@if (TempData["Erro"] != null)
+{
+    <div class="not" style=" background-color: #b67804; border: 1px solid; margin-top: 2rem; padding: 1rem; width: 14rem; justify-content:center;">
+        @TempData["Erro"]
+    </div>
+}
 
 <div class="container-contato container-login">
-    <form class="form-contato">
-        <label for="email">Digite o seu e-mail</label>
-        <input class="inputField" type="email" id="email" name="email" placeholder="exemplo@hotmail.com" required>
+
+    
+
+    <form action="/Home/Produtos"  class="form-contato" method="post">
+        <label for="text">Digite o seu e-mail</label>
+        <input class="inputField" type="text" id="text" name="login" placeholder="exemplo@hotmail.com" >
 
         <label for="senha">Digite a sua senha</label>
-        <input class="inputField" type="password" id="senha" name="senha" placeholder="senha123" required>
-
+        <input class="inputField" type="password" id="senha" name="senha" placeholder="senha123" >
+@*
         <div class="acesso">
             <a href="">Perdeu a sua senha?</a>
         </div>
-
+*@
         <button type="submit" class="btn-site">Enviar</button>
     </form>
 </div>
