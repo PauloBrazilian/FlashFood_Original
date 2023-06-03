@@ -7,9 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<Contexto>
-    (options => options.UseSqlServer
-    //("Data Source=DESKTOP-DMA7FVO\\SQLBIA;Database = DB_FlashFood;User ID=sa;Password= 91425836"));
-("Data Source = DESKTOP-DMA7FVO; Initial Catalog =BD_FlashFood; Persist Security Info=True; User ID =sa; Password =91425836"));
+    (options => options.UseSqlServer("Server=201.55.32.20;Database=FLASH;User Id=sa;Password=aluno123;") );
+//("Data Source=DESKTOP-DMA7FVO\\SQLBIA;Database = DB_FlashFood;User ID=sa;Password= 91425836"));
+
 
 var app = builder.Build();
 

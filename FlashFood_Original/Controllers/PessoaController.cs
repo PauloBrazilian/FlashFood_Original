@@ -13,6 +13,12 @@ namespace FlashFood_Original.Controllers
             _db = contexto;
         }
 
+        public IActionResult Index()
+        {
+            _db.Gerentes.Add(new Entidades.Pessoa() { Nome = "Fer", Senha="ABC123" });
+            _db.SaveChanges();
+            return View();
+        }
 
 
         [HttpPost]
