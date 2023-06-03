@@ -12,6 +12,7 @@
 
     
     <link rel="stylesheet" href="assets/css/style.css">
+    @RenderSection("CSS", false)
 </head>
 <body>
     <header id="header">
@@ -26,9 +27,28 @@
             <ul id="menu" role="menu">
                 <li><a asp-controller="Home" asp-action="Index">Início</a></li>
                 <li><a asp-controller="Home" asp-action="Produtos">Cardápio</a></li>
-                <li><a asp-controller="Home" asp-action="Contato">Contato</a></li>
-                <div>
-                <li><a class="btn-site login" asp-controller="Home" asp-action="Login">Login</a></li></div>
+                <li>
+                    <a asp-controller="Home" asp-action="Contato">
+                        Contato
+                    </a>
+                </li>
+                @if (User.IsInRole("Administrador"))
+                {
+                    <li>
+                        <a href="/Home/Logoff">
+                            Sair
+                        </a>
+                    </li>
+                }else
+                {
+                    <li>
+                        <a class="btn-site login" asp-controller="Home" asp-action="Login">
+                            Login
+                        </a>
+                    </li>
+                }
+               
+               
             </ul>
         </nav>
     </header>

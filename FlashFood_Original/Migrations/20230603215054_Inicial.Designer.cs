@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FlashFood_Original.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20230603212148_Inicial")]
+    [Migration("20230603215054_Inicial")]
     partial class Inicial
     {
         /// <inheritdoc />

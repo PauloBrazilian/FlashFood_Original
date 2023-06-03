@@ -1,8 +1,5 @@
 ﻿@model FlashFood_Original.Controllers.PessoaController
 
-<link href="@Url.Content("~/assets/css/style.css")" rel="stylesheet" type="text/css" />
-
-
 
 
 @if (TempData["Erro"] != null)
@@ -16,7 +13,7 @@
 
     
 
-    <form action="/Home/Produtos"  class="form-contato" method="post">
+    <form action="/Home/Login"  class="form-contato" method="post">
         <label for="text">Digite o seu e-mail</label>
         <input class="inputField" type="text" id="text" name="login" placeholder="exemplo@hotmail.com" >
 
@@ -30,3 +27,11 @@
         <button type="submit" class="btn-site">Enviar</button>
     </form>
 </div>
+
+
+
+@section CSS
+    {
+
+    <link href="@Url.Content("~/assets/css/style.css")" rel="stylesheet" type="text/css" />
+}
